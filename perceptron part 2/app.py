@@ -54,6 +54,7 @@ def draw():
             fill = "green"
             ellipse(pt.x, pt.y, 10, "black", fill)
 
+
     turtle_mainloop()
 
 

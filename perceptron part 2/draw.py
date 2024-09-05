@@ -3,19 +3,6 @@ import turtle
 WIDTH=800
 HEIGHT=800
 
-# WIDTH=800
-# HEIGHT=700
-# WIDTH, HEIGHT = 750, 750
-#
-# screen = turtle.Screen()
-# screen.setup(WIDTH + 4, HEIGHT + 8)  # fudge factors due to window borders & title bar
-
-# height = 760
-# width = 360
-# screen = turtle.Screen()
-# screen.screensize(width, height)
-
-
 def turtle_init():
     turtle.setup(WIDTH, HEIGHT)
     turtle.tracer(False)
@@ -51,9 +38,6 @@ def turtle_on_click(callback):
     screen = turtle.Screen()
     screen.onclick(callback)
 
-
-def mouse_pressed(x, y):
-    print("YO DA MAN!")
 
 def turtle_mainloop():
     turtle.Screen().mainloop()
