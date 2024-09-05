@@ -2,23 +2,32 @@ from random import randrange
 
 from draw import ellipse, WIDTH, HEIGHT
 
+
+def f(x):
+    # y = mx + b
+    return 0.8 * x - 5
+
+
 class Point:
     x = 0.0
     y = 0.0
     label = 0
+    bias = 1
+
     def __init__(self, x=None, y=None):
-        w=int(WIDTH / 2)
-        h=int(HEIGHT / 2)
+        w = int(WIDTH / 2)
+        h = int(HEIGHT / 2)
         if x is None:
-            self.x=randrange(-w, w)
+            self.x = randrange(-w, w)
         else:
             self.x = x
         if y is None:
-            self.y=randrange(-h, h)
+            self.y = randrange(-h, h)
         else:
             self.y = y
 
-        if self.x>self.y:
+        lineY = f(self.x)
+        if self.y > lineY:
             self.label = 1
         else:
             self.label = -1

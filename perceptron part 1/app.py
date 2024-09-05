@@ -30,14 +30,12 @@ def setup():
 
 
 def greeting(x, y):
-    print("YOU ARE A GOOD GUY!")
-
     for pt in list_of_points:
         target = pt.label
         inputs = (pt.x, pt.y)
         brain.train(inputs, target)
-
     draw()
+
 def draw():
     print("number of points is:", len(list_of_points))
     for pt in list_of_points:

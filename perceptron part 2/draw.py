@@ -3,6 +3,11 @@ import turtle
 WIDTH=800
 HEIGHT=800
 
+def turn_on_tracer():
+    turtle.tracer(True)
+    turtle.speed("fastest")
+    # turtle.hideturtle()
+
 def turtle_init():
     turtle.setup(WIDTH, HEIGHT)
     turtle.tracer(False)
@@ -11,11 +16,16 @@ def turtle_init():
 def turtle_close():
     turtle.exitonclick()
 
-def line(x1, y1, x2, y2):
+def turtle_clear():
+    turtle.clear()
+
+def line(x1, y1, x2, y2, color="black"):
     turtle.penup()
     start=(x1, y1)
     end=(x2, y2)
-    turtle.fillcolor("black")
+    turtle.color(color, color)  # line color, fill color
+
+    turtle.fillcolor(color)
 
     turtle.goto(start)
     turtle.pendown()
@@ -42,6 +52,8 @@ def turtle_on_click(callback):
 def turtle_mainloop():
     turtle.Screen().mainloop()
 
+def turtle_update():
+    turtle.Screen().update()
 
 # turtle_init()
 
