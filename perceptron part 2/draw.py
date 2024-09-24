@@ -8,8 +8,12 @@ def turn_on_tracer():
     turtle.speed("fastest")
     # turtle.hideturtle()
 
-def turtle_init():
-    turtle.setup(WIDTH, HEIGHT)
+def turtle_init(width=None, height=None):
+
+    if width != None and height != None:
+        turtle.setup(width, height)
+    else:
+        turtle.setup(WIDTH, HEIGHT)
     turtle.tracer(False)
     turtle.bgcolor("grey")
 

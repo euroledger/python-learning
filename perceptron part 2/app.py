@@ -18,7 +18,7 @@ def setup():
     for i in range(0, 100):
         list_of_points.append(Point())
 
-    turtle_init()
+    turtle_init(600, 500)
     turtle_on_click(greeting)
 
 def train():
