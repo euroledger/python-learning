@@ -1,43 +1,31 @@
+from console import console
 from matrix import Matrix
 from nn import NeuralNetwork
-import pandas as pd
+
 
 print ("Welcome to my Neural Network")
-
-class console:
-    @staticmethod
-    def table(m):
-        print(pd.DataFrame(m.matrix))
-        print("\n")
 
 
 def setup():
     brain = NeuralNetwork(3, 3, 1)
 
+    a = Matrix(2,3)
+    a.randomize()
 
-    m = Matrix(3, 2)
-    m.randomize()
-    console.table(m)
+    console.table(a)
 
-    n = Matrix(3, 2)
-    n.randomize()
+    b = a.transpose()
+    console.table(b)
 
-    m.add(1)
-    console.table(m)
-
-    console.table(n)
-
-    m.add(n)
-    console.table(m)
-
-    # m.add(5)
-    # m.multiply(-3)
-    # # print(m.toStr())
+    # b = Matrix (3,2)
+    # a.randomize()
+    # b.randomize()
     #
-    # console.table(m)
+    # console.table(a)
+    # console.table(b)
     #
-    # print("\n")
-    #
+    # c = a.multiply(b)
+    # console.table(c)
 
 
 setup()
