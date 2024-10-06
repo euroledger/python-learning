@@ -22,12 +22,8 @@ def setup():
 
     for i in range(0, 100):
         list_of_points.append(Point())
-    # list_of_points.append((Point(0, -200)))
-    # list_of_points.append((Point(-200, 0)))
 
     turtle_init()
-    turtle_on_click(greeting)
-
 
 def greeting(x, y):
     for pt in list_of_points:
@@ -37,7 +33,6 @@ def greeting(x, y):
     draw()
 
 def draw():
-    print("number of points is:", len(list_of_points))
     for pt in list_of_points:
         pt.show()
 
@@ -47,7 +42,6 @@ def draw():
         target = pt.label
         inputs = (pt.x, pt.y)
         guess = brain.guess(inputs)
-        print("guess=", guess, "target=", target)
         if guess == target:
             fill = "green"
             ellipse(pt.x, pt.y, 10, "black", fill)
@@ -88,4 +82,4 @@ class Perceptron:
 brain = Perceptron()
 setup()
 draw()
-turtle_close()
+# turtle_close()
