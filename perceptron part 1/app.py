@@ -1,6 +1,6 @@
 import random
 
-from draw import turtle_init, turtle_close, line, WIDTH, HEIGHT, turtle_on_click, turtle_mainloop, ellipse
+from draw import size, turtle_close, line, WIDTH, HEIGHT, turtle_on_click, turtle_mainloop, ellipse
 from training import Point
 
 list_of_points = []
@@ -23,7 +23,7 @@ def setup():
     for i in range(0, 100):
         list_of_points.append(Point())
 
-    turtle_init()
+    size(800, 800)
 
 def greeting(x, y):
     for pt in list_of_points:

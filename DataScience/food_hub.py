@@ -77,25 +77,26 @@ top_customers = df['customer_id'].value_counts().nlargest(3)
 print("top 3 customers=", top_customers)
 
 # Q.12
-# ax1 = df.plot.scatter(x='cost_of_the_order',
-#                       y='food_preparation_time',
-#                       c='DarkBlue')
-# ax2 = df.plot.scatter(x='food_preparation_time',
-#                       y='delivery_time',
-#                       c='DarkBlue')
+ax1 = df.plot.scatter(x='cost_of_the_order',
+                      y='food_preparation_time',
+                      c='DarkBlue')
+ax2 = df.plot.scatter(x='food_preparation_time',
+                      y='delivery_time',
+                      c='DarkBlue')
 
-# ax3 = df.plot.scatter(x='cuisine_type',
-#                       y='cost_of_the_order',
-#                       c='DarkBlue')
+ax3 = df.plot.scatter(x='cuisine_type',
+                      y='cost_of_the_order',
+                      c='DarkBlue')
 
-# ax4 = df.plot.scatter(x='restaurant_name',
-#                       y='cost_of_the_order',
-#                       c='DarkBlue')
+ax4 = df.plot.scatter(x='restaurant_name',
+                      y='cost_of_the_order',
+                      c='DarkBlue')
 
-# ax5 = df.plot.scatter(x='day_of_the_week',
-#                       y='delivery_time',
-#                       c='DarkBlue')
-
+ax5 = df.plot.scatter(x='day_of_the_week',
+                      y='delivery_time',
+                      c='DarkBlue')
+ax5.legend()
+plt.show()
 # ratings = df[df['rating'] != 'Not given'].sort_values('rating')
 #
 # ax6 = ratings.plot.scatter(x='rating',
@@ -108,8 +109,7 @@ print("top 3 customers=", top_customers)
 #     df[df.restaurant_name == name].plot.scatter('cost_of_the_order', 'delivery_time',
 #                                                       ax=ax, color='C{}'.format(i),
 #                                                       label=name)
-# ax.legend()
-# plt.show()
+
 
 # Q.13
 
@@ -172,6 +172,8 @@ print(cuisine_type)
 # recommendation - Spanish, Thai and Indian are the most popular, go with these!
 
 # Could do further analysis of cost vs cuisine type, or whether to focus on weekends
+
+
 
 
 

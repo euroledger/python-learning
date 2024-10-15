@@ -16,8 +16,8 @@ HEIGHT=800
 # screen.screensize(width, height)
 
 
-def turtle_init():
-    turtle.setup(WIDTH, HEIGHT)
+def size(height, width):
+    turtle.setup(width, height)
     turtle.tracer(False)
     turtle.bgcolor("grey")
 
