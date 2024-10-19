@@ -24,11 +24,9 @@ class Point:
             self.label = -1
 
     def show(self):
-        fill = ""
         if self.label == 1:
             fill = "white"
         else:
             fill = "black"
 
-        # print("label=", self.label)
         ellipse(self.x, self.y, 10, "blue", fill)

@@ -20,6 +20,12 @@ class TestMatrix(unittest.TestCase):
         b = a.transpose()
         self.assertEqual(b.data, [[1, 4], [2, 5], [3, 6]])
 
+    def test_from_array(self):
+        a = [1,2,3]
+
+        b = Matrix.from_array(a)
+        self.assertEqual(b.data, [[1],[2],[3]])
+
 
 
 if __name__ == '__main__':

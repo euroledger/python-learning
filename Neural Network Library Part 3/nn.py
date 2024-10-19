@@ -1,3 +1,6 @@
+from matrix import Matrix
+
+
 class NeuralNetwork:
 
     # Constructor
@@ -5,6 +8,3 @@ class NeuralNetwork:
         self.input_nodes = input_nodes
         self.hidden_nodes = hidden_nodes
         self.output_nodes = output_nodes
-
-
-        

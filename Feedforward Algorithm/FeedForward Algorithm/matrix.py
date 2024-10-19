@@ -20,10 +20,24 @@ class Matrix:
                 for j in range(0, cols):
                     self.data[i].append(0)
 
+    @staticmethod
+    def from_array(arr):
+        m = Matrix(len(arr), 1)
+        for i in range(0, len(arr)):
+            m.data[i][0] = arr[i]
+        return m
+
+    def to_array(self):
+        arr = []
+        for i in range(0, self.rows):
+            for j in range(0, self.cols):
+                arr.append(self.data[i][j])
+        return arr
+
     def randomize(self):
         for i in range(0, self.rows):
             for j in range(0, self.cols):
-                self.data[i][j] = random.randrange(10)
+                self.data[i][j] = random.uniform(-1, 1)
 
 
     def add(self, n):
