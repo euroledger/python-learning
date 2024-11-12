@@ -7,12 +7,14 @@ print ("Welcome to my Neural Network")
 
 
 def setup():
-    a = NeuralNetwork(2,2,1)
+    nn = NeuralNetwork(2,2,2)
 
-    input_array = [1,0]
-    output = a.feed_forward(input_array)
+    inputs = [1,0]
+    targets = [1, 0]
 
-    print(output)
+    # output = nn.feed_forward(input_array)
+    # print(output)
 
+    nn.train(inputs, targets)
 
 setup()

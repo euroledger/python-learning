@@ -41,3 +41,24 @@ class NeuralNetwork:
         output.map(sigmoid)
 
         return output.to_array()
+
+    def train(self, inputs, targets):
+        outputs = self.feed_forward(inputs)
+
+        # convert array to matrix object
+        outputs = Matrix.from_array(outputs)
+        targets = Matrix.from_array(targets)
+
+        # calculate the error
+        # error = targets - outputs
+
+        output_errors = Matrix.subtract(targets, outputs)
+
+        # calculate the hidden layer errors
+        who_t = Matrix.transpose(self.weights_ho)
+        hidden_errors = Matrix.my_multiply(who_t, output_errors)
+
+        outputs.print_matrix()
+        targets.print_matrix()
+        hidden_errors.print_matrix()
+        output_errors.print_matrix()

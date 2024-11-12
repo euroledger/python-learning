@@ -27,6 +27,17 @@ class Matrix:
             m.data[i][0] = arr[i]
         return m
 
+    @staticmethod
+    def subtract(a, b):
+        # return a new matrix a-b
+        result = Matrix(a.rows, a.cols)
+
+        for i in range(0, result.rows):
+            for j in range(0, result.cols):
+                result.data[i][j] = a.data[i][j] - b.data[i][j]
+
+        return result
+
     def to_array(self):
         arr = []
         for i in range(0, self.rows):
@@ -51,12 +62,13 @@ class Matrix:
             for j in range(0, self.cols):
                 self.data[i][j] += n
 
-    def transpose(self):
-        result = Matrix(self.cols, self.rows)
+    @staticmethod
+    def transpose(matrix):
+        result = Matrix(matrix.cols, matrix.rows)
 
-        for i in range(0, self.rows):
-            for j in range(0, self.cols):
-                result.data[j][i] += self.data[i][j]
+        for i in range(0, matrix.rows):
+            for j in range(0, matrix.cols):
+                result.data[j][i] = matrix.data[i][j]
 
         return result
 
@@ -101,6 +113,7 @@ class Matrix:
 
     def print_matrix(self):
         console.table(self)
+
 
 
 
